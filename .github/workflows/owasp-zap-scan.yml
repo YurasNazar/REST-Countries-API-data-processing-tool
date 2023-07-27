@@ -2,12 +2,12 @@ name: OWASP ZAP Baseline Scan
 on:
   push:
     branches: [ master ]
-    
+  workflow_dispatch:    
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:     
     - name: OWASP ZAP Baseline Scan
-      uses: zaproxy/action-baseline@v0.3.0
+      uses: zaproxy/action-baseline@v0.8.2
       with:
         target: 'https://www.zaproxy.org/'
